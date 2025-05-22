@@ -1,0 +1,20 @@
+RewriteEngine on
+
+# Redirect any /path/index.html, /path/index.php, /path/index.phtml or /path/index to /path/
+RewriteCond %{THE_REQUEST} /(.*/)?index(\.html?|\.php|\.phtml)?[\s?] [NC]
+RewriteRule ^(.*)index(\.html?|\.php|\.phtml)?$ /$1 [R=301,L]
+
+# Redirect any .html, .php, or .phtml file to extensionless version
+RewriteCond %{THE_REQUEST} /([^.]+)\.(html?|php|phtml) [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Internally rewrite extensionless URLs to existing .html, .php, or .phtml files (in that order)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+RewriteCond %{REQUEST_FILENAME}.phtml -f
+RewriteRule ^ %{REQUEST_URI}.phtml [NC,L]
+
+# Custom 404 error page
+ErrorDocument 404 /404page.html
