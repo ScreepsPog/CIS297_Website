@@ -1,13 +1,217 @@
+
+/*
+
+=====================================
+
+            Footer Box Setup
+
+=====================================
+
+*/
+
+
 .footerContainer {
-    width: 100%; height: 400px;
-    background-color: #021423;
+    width: 100%;
+    background-color: #021523;
+    color: white;
     border-top: 2px solid #2fd4d0;
 }
 
 .footerContentContainer {
     max-width: 1200px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 24px;
+}
+
+.footerContentTopBox, .footerContentMidBox, .footerContentBotBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/*
+
+=====================================
+
+                Top Box
+
+=====================================
+
+*/
+
+
+.footerContentTopBox {
+    margin-top: 24px;
+}
+
+.footerLogo {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.footerLogo > a > img {
+    width: 100px;
+    height: 100%;
+    transition: filter 300ms ease-in-out;
+}
+
+.footerLogo > a:hover > img {
+    filter: brightness(1.5);
+}
+
+.footerBackTop {
+    width: 125px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footerBackTop > a {
+    font-size: 1.6rem;
+    transition: color 300ms ease-in-out;
+}
+
+.footerBackTop > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #2fd4d0;
+}
+
+.footerContentTopBox > .footerContactButton {
+    width: 150px; height: auto;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.footerContentTopBox > .footerContactButton > a {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 45px;
+    background-color: white;
+    color: black;
+    transition: color 300ms ease-in-out,  300ms ease-in-out;
+}
+
+.footerContentTopBox > .footerContactButton > a:hover {
+    color: white;
+    background-color: #2fd4d0;
+}
+
+/*
+
+=====================================
+
+                Middle Box
+
+=====================================
+
+*/
+
+.footerContentMidBox {
+    border-top: 2px solid #2fd4d0;
+    border-bottom: 2px solid #2fd4d0;
+    padding: 24px;
+}
+
+.footerContentMidInner > p {
+    font-size: 2.4rem;
+}
+
+.footerContentMidInner > ul {
+    list-style: none;
+}
+
+.footerContentMidInner > ul > li:first-of-type {
+    padding-top: 24px;
+}
+
+.footerContentMidInner > ul > li:not(:last-of-type) {
+    padding-bottom: 12px;
+}
+
+.footerContentMidInner > ul > li > a {
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;
+    transition: color 300ms ease-in-out, text-decoration 300ms ease-in-out;
+}
+
+.footerContentMidInner > ul > li > a:hover {
+    color: #2fd4d0;
+    text-decoration: underline;
+}
+
+/*
+
+=====================================
+
+                Bottom Box
+
+=====================================
+
+*/
+
+.footerContentBotBox {
+    align-items: end;
+    padding-bottom: 24px;
+}
+
+.footerContentBotBox > p {
+    font-size: 2rem;
+}
+
+.footerSocialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.footerSocialMedia > a {
+    width: 50px; height: 50px
+}
+
+.footerSocialMedia > a > svg {
+    width: 100%; height: 100%;
+}
+
+#facebook, .instagram-path, #tiktok, #youtube {
+    transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+    color: white;
+}
+
+#facebook:hover {
+    color: #0866ff;
+}
+
+.instagram-path.gradient {
+    opacity: 0;
+}
+
+#instagram:hover .instagram-path.gradient {
+    opacity: 1;
+}
+
+#instagram:hover .instagram-path.white {
+    opacity: 0;
+}
+
+#tiktok:hover {
+    color: #111;
+}
+
+#youtube:hover {
+    color: #ff0033;
 }
