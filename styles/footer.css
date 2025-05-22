@@ -53,13 +53,13 @@
 .footerLogo {
     width: 150px;
     height: auto;
-    border-radius: 12px;
     overflow: hidden;
 }
 
 .footerLogo > a > img {
     width: 100px;
     height: 100%;
+    border-radius: 12px;
     transition: filter 300ms ease-in-out;
 }
 
@@ -94,11 +94,10 @@
 .footerContentTopBox > .footerContactButton > a {
     width: 150px;
     display: flex;
-    align-items: center;
     justify-content: center;
     font-size: 1.8rem;
     text-decoration: none;
-    padding: 18px;
+    padding: 16px;
     border-radius: 45px;
     background-color: white;
     color: black;
@@ -214,4 +213,79 @@
 
 #youtube:hover {
     color: #ff0033;
+}
+
+
+/*
+
+=====================================
+
+            Responsiveness
+
+=====================================
+
+*/
+
+@media(max-width: 480px) {
+    .footerContentContainer {
+        width: 95%;
+    }
+    
+    .footerContentTopBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footerBackTop {
+        order: 1;
+        padding-bottom: 12px;
+    }
+
+    .footerContentTopBox > .footerLogo {
+        order: 3;
+        width: 100px;
+    }
+
+    .footerContentTopBox > .footerContactButton {
+        order: 2;
+    }
+
+    .footerContentMidBox {
+        justify-content: space-between;
+    }
+
+    .footerContentMidBox > .footerContentMidInner:first-of-type {
+        display: none;
+    }
+
+    .footerContentMidInner {
+        max-width: 50%;
+    }
+
+    .footerContentBotBox {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .copyright {
+        order: 2;
+        text-align: center;
+    }
+
+    .footerSocialMedia {
+        order: 1;
+    }
+}
+
+@media(min-width: 481px) {
+    .footerContentContainer {
+        width: 95%;
+    }
+}
+
+@media(min-width: 1200px) {
+
 }
