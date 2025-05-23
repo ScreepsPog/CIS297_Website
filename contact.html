@@ -51,7 +51,18 @@
             </nav>
         </header>
         <main>
-            <h1>Vertex Solutions</h1>
+            <div class="form-container" id="form-container">
+                <h1>Contact Vertex Solutions</h1>
+                <form id="contact-form">
+                  <label for="name">Your Name:</label>
+                  <input type="text" name="name" id="name" required />
+                  <label for="email">Your Email:</label>
+                  <input type="email" name="email" id="email" required />
+                  <label for="message">Your Message:</label>
+                  <textarea name="message" id="message" rows="5" required></textarea>
+                  <input type="submit" value="Send Message" />
+                </form>
+            </div>
         </main>
         <footer class="footerContainer fade-section">
             <div class="footerContentContainer">
@@ -109,5 +120,6 @@
         <script src="scripts/navMobile.js"></script>
         <script src="scripts/scrollToTop.js"></script>
         <script src="scripts/fadeInOnLoad.js"></script>
+        <script src="scripts/contact.js"></script>
     </body>
 </html>
