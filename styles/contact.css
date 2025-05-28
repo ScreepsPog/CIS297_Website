@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: #021523;
+    background-color: #444;
     color: #EEE;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -23,7 +23,7 @@ h1 {
 .form-container {
   max-width: 600px;
   margin: 30px auto;
-  background: #444;
+  background: #021523;
   padding: 30px 40px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(47, 212, 208, 0.3);
@@ -46,8 +46,8 @@ textarea {
   border: 2px solid #2fd4d0;
   border-radius: 6px;
   font-size: 1.4rem;
-  background: #021523;
-  color: white;
+  background: #eee;
+  color: #222;
   transition: border-color 0.3s;
 }
 
