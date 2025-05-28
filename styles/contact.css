@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    background-color: #EEE;
-    color: #222;
+    background-color: #021523;
+    color: #EEE;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -22,7 +22,7 @@ h1 {
 
 .form-container {
   max-width: 600px;
-  margin: auto;
+  margin: 30px auto;
   background: #444;
   padding: 30px 40px;
   border-radius: 10px;
@@ -30,6 +30,7 @@ h1 {
 }
 
 label {
+  font-size: 1.6rem;
   display: block;
   margin-top: 20px;
   color: #2fd4d0;
@@ -44,7 +45,7 @@ textarea {
   margin-top: 8px;
   border: 2px solid #2fd4d0;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   background: #021523;
   color: white;
   transition: border-color 0.3s;
@@ -70,7 +71,7 @@ input[type="submit"] {
   border: none;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
