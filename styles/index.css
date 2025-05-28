@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    background-color: #EEE;
     color: #222;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -89,12 +88,124 @@ main {
     color: white;
     font-size: 2rem;
     white-space: nowrap;
-    background-color: #2fd4d0;
+    background-color: #00c0d4;
     padding: 16px 32px;
     border-radius: 24px;
     transition: background-color 150ms ease-in-out;
 }
 
 .heroCTAButton > a:hover {
+    background-color: #33ece9;
+}
+
+/*
+
+=====================================
+
+            Intro Section
+
+=====================================
+
+*/
+
+.introContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.introContainer > h1 {
+    text-align: center;
+    color: #2fd4d0;
+    font-weight: bold;
+    font-size: 3.6rem;
+}
+
+/*
+
+=====================================
+
+            Services Container
+
+=====================================
+
+*/
+
+.servicesContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.servicesContainer > h1 {
+    font-size: 4.8rem;
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.serviceCardsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 24px;
+}
+
+/*
+
+=====================================
+
+            Services Card
+
+=====================================
+
+*/
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+    background-color: #fafafa;
+    border-radius: 12px;
+}
+
+.serviceCardImg {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.serviceCardImg > img {
+    width: 100%;
+}
+
+.serviceCard > h2 {
+    font-size: 2rem;
+    min-height: 75px;
+}
+
+.serviceCard > h2, .serviceCard > p {
+    max-width: 90%;
+    text-align: center;
+}
+
+.serviceCard > p {
+    min-height: 150px;
+    font-size: 1.6rem;
+}
+
+.serviceCard > a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    white-space: nowrap;
+    background-color: #00c0d4;
+    padding: 16px 32px;
+    border-radius: 24px;
+    transition: background-color 150ms ease-in-out;
+}
+
+.serviceCard > a:hover {
     background-color: #33ece9;
 }
