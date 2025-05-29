@@ -9,12 +9,59 @@ html {
 }
 
 body {
-    background-color: #EEE;
-    color: #222;
+    background-color: #444;
+    color: #EEE;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
+    color: #2fd4d0;
     font-size: 2rem;
     text-align: center;
+}
+
+h2 {
+      color: #2fd4d0;
+      font-size: 2rem
+}
+
+.about-us {
+      background: #021523;
+      padding: 1em;
+      max-width: 85vw;
+      margin: 0 auto;
+      border-radius: 8px;
+}
+
+p {
+      line-height: 1.7;
+      font-size: 1.5rem;
+    }
+
+.team-member {
+      display: flex;
+      background: #021523;
+      padding: 1em;
+      border-radius: 8px;
+      max-width: 85vw;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+}
+
+.team-member img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 1em;
+      border-radius: 8px;
+}
+
+.team-member p{
+      line-height: 1.7;
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: white;
+}
+.member-info {
+      flex: 1;
 }
