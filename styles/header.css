@@ -167,7 +167,7 @@
     transition: transform 150ms ease-in-out;
 }
 
-#ServicesArrow:hover > svg {
+li:hover > #ServicesArrow > svg {
     transform: rotate(180deg);
 }
 
