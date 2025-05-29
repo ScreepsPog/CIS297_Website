@@ -30,7 +30,7 @@ main {
 */
 
 .heroContainer {
-    height: calc(85vh - 100px);
+    height: calc(65vh - 100px);
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -52,42 +52,48 @@ main {
 
 */
 
-.heroContentContainer {
-    position: absolute;
+.heroContentBackground {
+    height: 100%;
     z-index: 2;
-    top: 20%;
-    left: 5%;
+    background: linear-gradient(105deg, #111 0%, #1A1A1A 35%, #222 50%, rgba(0, 0, 0, 0) 100%);
+    position: relative;
 }
 
-/* Colors are temporary, should be changed in the future */
+.headerContentContainer {
+    position: absolute;
+    max-width: 40%;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-60%);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
 .heroHeader {
-    font-size: 7.2rem;
-    color: #00a89d;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    color: white;
     font-weight: bold;
-    transform: skew(-20deg);
+    font-family: 'Catamaran', Helvetica, Arial, Lucida, sans-serif;
 }
 
 .heroHeader > span {
-    font-size: 6rem;
-    color: #2fd4d0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    color: #33ece9;
+}
+
+.heroText {
+    color: white;
+    padding-left: 24px;
+    padding-bottom: 16px;
 }
 
 .heroCTAButton {
-    position: absolute;
-    bottom: 10%; 
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    text-align: right;
+    padding-right: 12px;
 }
 
 .heroCTAButton > a {
     text-decoration: none;
     color: white;
-    font-size: 2rem;
-    white-space: nowrap;
     background-color: #00c0d4;
     padding: 16px 32px;
     border-radius: 24px;
@@ -96,28 +102,6 @@ main {
 
 .heroCTAButton > a:hover {
     background-color: #33ece9;
-}
-
-/*
-
-=====================================
-
-            Intro Section
-
-=====================================
-
-*/
-
-.introContainer {
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.introContainer > h1 {
-    text-align: center;
-    color: #2fd4d0;
-    font-weight: bold;
-    font-size: 3.6rem;
 }
 
 /*
@@ -136,7 +120,6 @@ main {
 }
 
 .servicesContainer > h1 {
-    font-size: 4.8rem;
     text-align: center;
     padding-bottom: 12px;
 }
@@ -146,6 +129,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    justify-content: center;
     flex-direction: row;
     gap: 24px;
 }
@@ -163,7 +147,8 @@ main {
 .serviceCard {
     display: flex;
     flex-direction: column;
-    flex: 1 1 0;
+    flex: 1 1 300px;
+    max-width: 300px;
     align-items: center;
     padding: 12px;
     gap: 12px;
@@ -181,7 +166,6 @@ main {
 }
 
 .serviceCard > h2 {
-    font-size: 2rem;
     min-height: 75px;
 }
 
@@ -192,13 +176,11 @@ main {
 
 .serviceCard > p {
     min-height: 150px;
-    font-size: 1.6rem;
 }
 
 .serviceCard > a {
     text-decoration: none;
     color: white;
-    font-size: 2rem;
     white-space: nowrap;
     background-color: #00c0d4;
     padding: 16px 32px;
@@ -208,4 +190,256 @@ main {
 
 .serviceCard > a:hover {
     background-color: #33ece9;
+}
+
+/*
+
+=====================================
+
+            Intro Section
+
+=====================================
+
+*/
+
+
+
+/*
+
+=====================================
+
+            Media Queries
+
+=====================================
+
+*/
+
+@media (max-width: 3840px) {
+    .heroHeader {
+        font-size: 8rem;
+    }
+
+    .heroHeader > span {
+        font-size: 8rem;
+    }
+
+    .heroText {
+        font-size: 2.8rem;
+    }
+
+    .heroCTAButton > a {
+        font-size: 2.4rem;
+    }
+
+    .servicesContainer > h1 {
+        font-size: 4.8rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2.4rem;
+    }
+
+    .serviceCard > p {
+        min-height: 175px;
+        font-size: 1.8rem;
+    }
+
+    .serviceCard > a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1920px) {
+    .heroHeader {
+        font-size: 6.4rem;
+    }
+
+    .heroHeader > span {
+        font-size: 6.4rem;
+    }
+
+    .heroText {
+        font-size: 2.4rem;
+    }
+
+    .heroCTAButton > a {
+        font-size: 2rem;
+    }
+
+    .servicesContainer > h1 {
+        font-size: 4rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2.2rem;
+    }
+
+    .serviceCard > p {
+        min-height: 175px;
+        font-size: 1.8rem;
+    }
+
+    .serviceCard > a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .heroHeader {
+        font-size: 5.6rem;
+    }
+
+    .heroHeader > span {
+        font-size: 5.6rem;
+    }
+
+    .servicesContainer {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .heroHeader {
+        font-size: 4.8rem;
+    }
+
+    .heroHeader > span {
+        font-size: 4.8rem;
+    }
+
+    .heroText {
+        font-size: 2.2rem;
+    }
+
+    .heroCTAButton > a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hImg {
+        background-size: 120%;
+        background-position: 15% 50%;
+    }
+    
+    .heroContentBackground {
+        background: linear-gradient(105deg, #111 0%, #1A1A1A 45%, #222 55%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .headerContentContainer {
+        max-width: 45%;
+    }
+
+    .heroHeader {
+        font-size: 4.4rem;
+    }
+
+    .heroHeader > span {
+        font-size: 4.4rem;
+    }
+
+    .heroText {
+        font-size: 2rem;
+    }
+
+    .heroCTAButton > a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .hImg {
+        background-size: 160%;
+        background-position: 40% 50%;
+    }
+
+    .headerContentContainer {
+        max-width: 50%;
+    }
+
+    .heroHeader {
+        font-size: 3.6rem;
+    }
+
+    .heroHeader > span {
+        font-size: 3.6rem;
+    }
+
+    .heroText {
+        font-size: 1.8rem;
+    }
+
+    .heroCTAButton > a {
+        font-size: 1.6rem;
+    }
+
+    .servicesContainer > h1 {
+        font-size: 3.6rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2rem;
+    }
+
+    .serviceCard > p {
+        min-height: 150px;
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .heroContainer {
+        height: calc(85vh - 100px);
+    }
+
+    .hImg {
+        background-image: url(/images/heroImage.jpg);
+        background-size: 300%;
+        background-position: 60% 70%;
+    }
+
+    .heroContentBackground {
+        background: linear-gradient(105deg, #111 0%, #1A1A1A 20%, #222 30%, rgba(0, 0, 0, 0) 100%);
+    }
+    
+    .headerContentContainer {
+        height: 100%;
+        position: relative;
+        top: 0; bottom: 0; left: 0; right: 0;
+        max-width: 90%;
+        transform: unset;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .heroText {
+        padding-left: 0;
+    }
+
+    .heroCTAButton {
+        text-align: center;
+    }
+
+    .serviceCard {
+        flex: 1 1 300px;
+        max-width: 300px;
+    }
+
+    .servicesContainer > h1 {
+        font-size: 4rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2.2rem;
+    }
+
+    .serviceCard > p {
+        min-height: 175px;
+        font-size: 1.8rem;
+    }
+
+    .serviceCard > a {
+        font-size: 2rem;
+    }
 }
