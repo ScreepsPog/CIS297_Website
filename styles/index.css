@@ -16,7 +16,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 72px;
 }
 
 /*
@@ -73,7 +73,7 @@ main {
 .heroHeader {
     color: white;
     font-weight: bold;
-    font-family: 'Catamaran', Helvetica, Arial, Lucida, sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .heroHeader > span {

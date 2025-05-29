@@ -28,7 +28,17 @@
                     <nav class="navMobileList">
                         <ul>
                             <li><a href="/about-us">About Us</a></li>
-                            <li><a href="/services">Services</a></li>
+                            <li class="mobileDropDown">
+                                <button class="subDropDownButton" id="subDropDownButton" aria-expanded="false">Services <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L5 6L10 0H0Z" fill="currentColor"/></svg></button>
+                                <ul class="mobileDropDownMenu">
+                                    <li><a href="/services">All Services</a></li>
+                                    <li><a href="/services/help-desk">IT Support and Help Desk</a></li>
+                                    <li><a href="/services/network-infrastructure">Network Infrastructure</a></li>
+                                    <li><a href="/services/cloud-migration">Cloud Migration</a></li>
+                                    <li><a href="/services/cybersecurity">Cybersecurity Risk Assessment</a></li>
+                                    <li><a href="/services/systems">IT Systems Installation</a></li>
+                                </ul>
+                            </li>
                             <li><a href="/pricing">Pricing</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
@@ -44,7 +54,15 @@
                 </div>
                 <ul>
                     <li><a href="/about-us">About Us</a></li>
-                    <li><a href="/services" id="AboutUsArrow">Services <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L5 6L10 0H0Z" fill="currentColor"/></svg></a></li>
+                    <li class="dropDown"><a href="/services" id="ServicesArrow">Services <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L5 6L10 0H0Z" fill="currentColor"/></svg></a>
+                        <ul class="dropDownMenu">
+                            <li><a href="/services/help-desk">IT Support and Help Desk</a></li>
+                            <li><a href="/services/network-infrastructure">Network Infrastructure</a></li>
+                            <li><a href="/services/cloud-migration">Cloud Migration</a></li>
+                            <li><a href="/services/cybersecurity">Cybersecurity Risk Assessment</a></li>
+                            <li><a href="/services/systems">IT Systems Installation</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/pricing">Pricing</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
