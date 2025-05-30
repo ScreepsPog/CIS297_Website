@@ -33,13 +33,13 @@ function initFadeIn() {
         splashSections.forEach((section, index) => {
             setTimeout(() => {
                 section.classList.add('visible');
-            }, index * 300); // Increased delay to 300ms for more noticeable effect
+            }, index * 350); // Increased delay to 300ms for more noticeable effect
         });
         
         belowFoldSections.forEach(section => {
             observer.observe(section);
         }); 
-    }, 50);
+    }, 100);
 }
 
 // Run on initial load

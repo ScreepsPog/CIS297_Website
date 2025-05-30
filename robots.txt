@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /styles/
+Disallow: /scripts/
+Disallow: /images/
 Disallow: 404page.html
 
 Sitemap: http://cis297.aaugard.com/sitemap.xml

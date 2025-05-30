@@ -1,6 +1,5 @@
 document.getElementById("navHamburger").addEventListener("click", navMobileUpdate);
 
-// Only set this up once
 const subButton = document.getElementById("subDropDownButton");
 const subMenu = document.querySelector(".mobileDropDownMenu");
 
