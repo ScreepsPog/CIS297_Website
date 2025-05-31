@@ -202,7 +202,84 @@ main {
 
 */
 
+.introContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 144px;
+    padding: 72px 0;
+    background: linear-gradient(105deg, #EEE 0%, #EAEAEA 25%, #FFF 60%, rgba(0, 0, 0, 0) 100%);
+}
 
+.introBlockContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+}
+
+.introImageContainer {
+    order: 1;
+    max-width: 800px;
+    overflow: hidden;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+}
+
+.introImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.introContentContainer {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.introText {
+    line-height: 1.5;
+}
+
+.introCTAButtonContainer {
+    padding: 32px 32px 16px 0;
+    align-self: start;
+}
+
+.introCTAButton {
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #00c0d4;
+    border-radius: 24px;
+    transition: background-color 150ms ease-in-out;
+}
+
+.introCTAButton:hover {
+    background-color: #33ece9;
+    cursor: pointer;
+}
+
+.introBlockContainer:nth-of-type(even) .introImageContainer {
+    order: 2;
+    justify-self: right;
+    box-shadow: 8px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.introBlockContainer:nth-of-type(even) {
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.introBlockContainer:nth-of-type(even) .introCTAButtonContainer {
+    align-self: end;
+}
+
+.introBlockContainer:nth-of-type(even) .introContentContainer {
+    order: 1;
+}
 
 /*
 
@@ -245,6 +322,18 @@ main {
     }
 
     .serviceCard > a {
+        font-size: 2rem;
+    }
+
+    .introHeader {
+        font-size: 4rem;
+    }
+
+    .introText {
+        font-size: 2rem;
+    }
+
+    .introCTAButton {
         font-size: 2rem;
     }
 }
@@ -297,6 +386,22 @@ main {
         max-width: 95%;
         margin: 0 auto;
     }
+
+    .introBlockContainer {
+        max-width: 95%;
+    }
+
+    .introHeader {
+        font-size: 4rem;
+    }
+
+    .introText {
+        font-size: 2rem;
+    }
+
+    .introCTAButton {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -346,6 +451,41 @@ main {
     .heroCTAButton > a {
         font-size: 1.8rem;
     }
+
+    .introContainer {
+        gap: 72px;
+    }
+
+    .introBlockContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .introBlockContainer:nth-of-type(even) .introImageContainer {
+        order: 1;
+        justify-self: center;
+    }
+
+    .introBlockContainer:nth-of-type(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .introBlockContainer:nth-of-type(even) .introContentContainer {
+        order: 2;
+    }
+
+    .introImageContainer {
+        justify-self: center;
+    }
+
+    .introContentContainer {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .introCTAButtonContainer {
+        padding: 32px 0 16px 0;
+        align-self: start;
+    }
 }
 
 @media (max-width: 968px) {
@@ -385,6 +525,18 @@ main {
     .serviceCard > p {
         min-height: 150px;
         font-size: 1.6rem;
+    }
+
+    .introHeader {
+        font-size: 3.6rem;
+    }
+
+    .introText {
+        font-size: 1.8rem;
+    }
+
+    .introCTAButton {
+        font-size: 2rem;
     }
 }
 
@@ -441,5 +593,21 @@ main {
 
     .serviceCard > a {
         font-size: 2rem;
+    }
+
+    .introContentContainer {
+        max-width: 90%;
+    }
+
+    .introHeader {
+        font-size: 3.2rem;
+    }
+
+    .introText {
+        font-size: 1.6rem;
+    }
+
+    .introCTAButton {
+        font-size: 1.8rem;
     }
 }
