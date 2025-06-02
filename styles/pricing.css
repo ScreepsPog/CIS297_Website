@@ -9,12 +9,348 @@ html {
 }
 
 body {
-    background-color: #EEE;
     color: #222;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
+
+/*
+
+=====================================
+
+            Introduction
+
+=====================================
+
+*/
+
+.introContainer {
+    width: 100%;
+    margin-bottom: 72px;
+}
+
+.introHeaderImageContainer {
+    width: 100%;
+    height: 300px;
+    background-image: url(/images/introPricingHeader.jpg);
+    filter: brightness(.75);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 36px;
+}
+
+.introContainer > h1 {
     text-align: center;
+    color: #2fd4d0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.introContentContainer {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 36px;
+    padding-top: 72px;
+    margin: 0 auto;
+}
+
+.introImageContainer {
+    width: 90%;
+    border-radius: 45px;
+    overflow: hidden;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.introImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.introContent > p {
+    line-height: 1.5;
+}
+
+/*
+
+=====================================
+
+            Packages
+
+=====================================
+
+*/
+
+.packageContainer {
+    width: 100%;
+    padding: 72px 0;
+    background: linear-gradient(105deg, #EEE 0%, #EAEAEA 25%, #FFF 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.packageContainer > h1 {
+    text-align: center;
+    color: #2fd4d0;
+}
+
+.packageCardContainer {
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 300px;
+    justify-content: center;
+    gap: 36px;
+    margin: 0 auto;
+    padding: 24px 0 0 0;
+}
+
+.packageCard {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.packageImageContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.packageImageContainer > img {
+    width: 100%;
+}
+
+.packageContentContainer {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.packageContentContainer > h1, .packageContentContainer > p {
+    text-align: center;
+    line-height: 1.3;
+}
+
+.packageContentContainer > h1 {
+    height: 100px;
+}
+
+.packageContentContainer > p {
+    height: 175px;
+}
+
+.packageCTAButton {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.packageCTAButton > a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    background-color: #00c0d4;
+    padding: 16px 32px;
+    border-radius: 24px;
+    transition: background-color 150ms ease-in-out;
+}
+
+.packageCTAButton > a:hover {
+    background-color: #33ece9;
+}
+
+/*
+
+=====================================
+
+            More Needed
+
+=====================================
+
+*/
+
+.moreNeededContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 72px 0;
+}
+
+.moreNeededContainer > h1 {
+    text-align: center;
+    color: #2fd4d0;
+}
+
+.moreContentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 24px;
+    padding-top: 72px;
+}
+
+.moreContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.moreContent > h2 {
+    text-align: center;
+}
+
+.moreContent > p {
+    line-height: 1.3;
+}
+
+.moreCTAButton {
+    padding: 8px 16px 0 0;
+    text-align: right;
+}
+
+.moreCTAButton > a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    background-color: #00c0d4;
+    padding: 12px 32px;
+    border-radius: 24px;
+    transition: background-color 150ms ease-in-out;
+}
+
+.moreCTAButton > a:hover {
+    background-color: #33ece9;
+}
+
+.moreNeededImageContainer {
+    width: 100%;
+    border-radius: 45px;
+    overflow: hidden;
+    box-shadow: 8px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.moreNeededImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+/*
+
+=====================================
+
+            Media Queries
+
+=====================================
+
+*/
+
+@media (max-width: 3840px) {
+    .introContainer > h1 {
+        font-size: 6rem;
+    }
+
+    .introContent > h2 {
+        font-size: 2.8rem;
+    }
+
+    .introContent > p {
+        font-size: 1.8rem;
+    }
+
+    .packageContainer > h1 {
+        font-size: 4rem;
+    }
+    .packageContentContainer > h1 {
+        font-size: 2.4rem;
+    }
+
+    .packageContentContainer > p {
+        font-size: 1.6rem;
+    }
+
+    .packageCTAButton > a {
+        font-size: 1.8rem;
+    }
+
+    .moreNeededContainer > h1 {
+        font-size: 5.2rem;
+    }
+
+    .moreContent > h2 {
+        font-size: 3.6rem;
+    }
+    
+    .moreContent > p {
+        font-size: 2rem;
+    }
+
+    .moreCTAButton > a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1920px) {
+    .introContainer > h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 1600px) {
+
+}
+
+@media (max-width: 1440px) {
+    .moreNeededContainer {
+        width: 100%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .introContentContainer {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin: 0 auto;
+        gap: 48px;
+    }
+
+    .introImageContainer {
+        justify-self: center;
+    }
+    
+    .moreContentContainer {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin: 0 auto;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 968px) {
+    
+}
+
+@media(max-width: 600px) {
+    .introContentContainer {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .introContainer > h1 {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .moreNeededContainer > h1 {
+        font-size: 4.4rem;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    
+    .moreContentContainer {
+        max-width: 90%;
+    }
 }
