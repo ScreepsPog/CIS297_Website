@@ -18,3 +18,68 @@ h1 {
     font-size: 2rem;
     text-align: center;
 }
+
+/*
+
+=====================================
+
+            404 Container
+
+=====================================
+
+*/
+
+.errorPageContainer{
+    width: 100%;
+}
+
+.errorImageContainer, .messageContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.errorImageContainer > img {
+    width: 100%;
+}
+
+.messageContainer {
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+@media (max-width: 3840px) {
+    .messageContainer > h1 {
+        font-size: 4rem;
+        padding-bottom: 24px;
+    }
+
+    .messageContainer > p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1920px) {
+
+}
+
+@media (max-width: 1600px)  {
+
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 968px) {
+    .errorImageContainer, .messageContainer {
+        max-width: 95%;
+    }
+}
+
+@media(max-width: 600px) {
+
+}
