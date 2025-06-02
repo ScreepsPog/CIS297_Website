@@ -47,6 +47,16 @@ h1 {
     padding-bottom: 48px;
 }
 
+/*
+
+=====================================
+
+            Media Queries
+
+=====================================
+
+*/
+
 @media (max-width: 3840px) {
     .messageContainer > h1 {
         font-size: 4rem;
@@ -58,28 +68,8 @@ h1 {
     }
 }
 
-@media (max-width: 1920px) {
-
-}
-
-@media (max-width: 1600px)  {
-
-}
-
-@media (max-width: 1440px) {
-
-}
-
-@media (max-width: 1280px) {
-
-}
-
 @media (max-width: 968px) {
     .errorImageContainer, .messageContainer {
         max-width: 95%;
     }
-}
-
-@media(max-width: 600px) {
-
 }
