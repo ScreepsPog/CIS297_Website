@@ -9,15 +9,46 @@ html {
 }
 
 body {
-    background-color: #444;
-    color: #EEE;
+    background-color: #fafafa;
+    color: #222;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
-    text-align: center;
+/* hero container and text */
+.heroContainer {
+    height: calc(35vh - 100px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hImg {
+    background-image: url(/images/contactImage.jpg);
+    background-size: cover;
+    background-position: 0% 40%;
+}
+
+.headerContentContainer {
+    position: absolute;
+    max-width: 40%;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-60%);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.heroHeader {
     color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.heroText {
+    color: white;
+    padding-left: 24px;
+    padding-bottom: 16px;
 }
 
 .form-container {
