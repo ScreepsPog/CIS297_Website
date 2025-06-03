@@ -37,39 +37,73 @@ body {
 h1 {
       color: #222;
       margin: 2rem auto;
-      font-size: 3.5rem;
+      font-size: 4rem;
       text-align: center;
 }
 
-.aboutTextBlock {
-      margin: 0 auto 48px auto;
-      padding: 48px;
-      background-color: #444;
-      text-align: center;
+.aboutContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      padding: 48px 0;
+      background: linear-gradient(105deg, #727272be 0%, #1111110a 50%, #11111100 100%);
 }
 
-.aboutTextBlock h2 {
+.missionContainer, .whoContainer  {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 14px;
+      margin: 0 auto ;
+      padding: 8px;
+}
+
+.sideImageContainer {
+    order: 1;
+    max-height: 600px;
+    max-width: 500px;
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.sideImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+    object-fit:cover;
+}
+
+.infoTextBlock {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.infoTextBlock h2, .infoTextBlock h2 {
       margin-top: 24px;
-      color: #2fd4d0; 
-      min-height: 75px;
-      font-size: 3rem;
+      color: #2ac4c1; 
+      font-size: 3.5rem;
 }
 
-.aboutTextBlock p {
+.infoTextBlock p, .infTextBlock p {
       margin-top: 8px;
       line-height: 1.6;
-      color: #fafafa;
-      font-size: 1.8rem;
+      color: #021523;
+      font-size: 2rem;
       text-align: left;
 }
 
 .teamCardsContainer {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 32px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px; 
+  gap: 48px;
+  margin: 0 auto 48px auto;
+  justify-items: center;
 }
 
 .teamCard {
@@ -159,4 +193,16 @@ h1 {
       line-height: 1.6;
       font-size: 1.6rem;
       margin: 12px auto;
+}
+
+@media (max-width: 900px) {
+  .teamCardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .teamCardsContainer {
+    grid-template-columns: 1fr;
+  }
 }
