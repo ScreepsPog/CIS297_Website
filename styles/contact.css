@@ -69,6 +69,19 @@ body {
   box-shadow: 0 4px 12px rgba(47, 212, 208, 0.3);
 }
 
+.form-container p {
+    margin-top: 1rem;
+}
+
+.form-container p a {
+    color: #2fd4d0;
+    font-size: 1.4rem;
+}
+
+.form-container p a:hover {
+color: #fafafa;
+}
+
 label {
   font-size: 1.6rem;
   display: block;
