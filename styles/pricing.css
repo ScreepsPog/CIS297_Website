@@ -298,10 +298,6 @@ body {
     }
 }
 
-@media (max-width: 1600px) {
-
-}
-
 @media (max-width: 1440px) {
     .moreNeededContainer {
         width: 100%;
@@ -327,10 +323,6 @@ body {
         margin: 0 auto;
         gap: 48px;
     }
-}
-
-@media (max-width: 968px) {
-    
 }
 
 @media(max-width: 600px) {
