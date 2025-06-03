@@ -22,7 +22,7 @@ body {
 }
 
 .hImg {
-    background-image: url(/CIS297/images/aboutImage.jpg);
+    background-image: url(/images/aboutImage.jpg);
     background-size: cover;
     background-position: 0% 40%;
 }
