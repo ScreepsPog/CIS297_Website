@@ -14,9 +14,29 @@ body {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.heroContainer {
+    height: calc(55vh - 100px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hImg {
+    background-image: url(/CIS297/images/aboutImage.jpg);
+    background-size: cover;
+    background-position: 0% 40%;
+}
+
+.heroContentBackground {
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(105deg, #111111de 0%, #00000052 50%, #1111114f 100%);
+    position: relative;
+}
+
 h1 {
-      color: #444;
-      margin-bottom: 20px;
+      color: #222;
+      margin: 2rem auto;
       font-size: 3.5rem;
       text-align: center;
 }
@@ -32,7 +52,7 @@ h1 {
       margin-top: 24px;
       color: #2fd4d0; 
       min-height: 75px;
-      font-size: 2.5rem;
+      font-size: 3rem;
 }
 
 .aboutTextBlock p {
