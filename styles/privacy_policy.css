@@ -14,31 +14,24 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
-    text-align: center;
-}
-
 .privacy-info {
   background-color: #021523; /* Primary Background */
   color: white; /* Text on dark background */
-  padding: 60px 20px;
+  padding-bottom: 1rem;
   font-family: Arial, sans-serif;
 }
 
 .privacy-info h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-align: center;
   color: #2fd4d0; /* Accent */
-  margin-bottom: 40px;
   border-bottom: 3px solid #2fd4d0;
-  display: inline-block;
-  padding-bottom: 10px;
+  padding: 2rem;
 }
 
 #pcontent {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 2rem auto;
   background-color: #444; /* Secondary Background */
   padding: 40px 30px;
   border-radius: 10px;
@@ -62,11 +55,12 @@ h1 {
 
 #pcontent a {
   color: #2fd4d0;
-  text-decoration: underline;
+  text-decoration: none;
+    font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
 #pcontent a:hover {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
 }
