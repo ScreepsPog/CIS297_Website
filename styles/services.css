@@ -9,12 +9,574 @@ html {
 }
 
 body {
-    background-color: #EEE;
     color: #222;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
+/*
+
+=====================================
+
+            Introduction
+
+=====================================
+
+*/
+
+.introContainer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 72px;
+}
+
+.introHeaderImageContainer {
+    height: 400px;
+    background-image: url(/images/introServicesHeader.jpg);
+    background-size: cover;
+    background-position: 0% 35%;
+}
+
+.introHeaderContentBackground {
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(105deg, #111 0%, #1A1A1A 35%, #222 50%, rgba(0, 0, 0, 0) 100%);
+    position: relative;
+}
+
+.introHeaderContentContainer {
+    position: absolute;
+    max-width: 40%;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-80%);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.introHeader {
+    color: #33ece9;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+.introContentContainer {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 36px;
+    padding-top: 36px;
+    margin: 0 auto;
+}
+
+.introImageContainer {
+    width: 90%;
+    border-radius: 45px;
+    overflow: hidden;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.introImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.introContent > p {
+    line-height: 1.5;
+}
+
+/*
+
+=====================================
+
+                Services
+
+=====================================
+
+*/
+
+.servicesContainer {
+    max-width: 1600px;
+    margin: 72px auto 72px auto;
+}
+
+.servicesContainer > h1 {
     text-align: center;
+    padding-bottom: 36px;
+}
+
+.serviceCardsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    max-width: 300px;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+    background-color: #fafafa;
+    border-radius: 12px;
+}
+
+.serviceCardImg {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.serviceCardImg > img {
+    width: 100%;
+}
+
+.serviceCard > h2 {
+    min-height: 75px;
+}
+
+.serviceCard > h2, .serviceCard > p {
+    max-width: 90%;
+    text-align: center;
+}
+
+.serviceCard > p {
+    min-height: 150px;
+}
+
+.serviceCard > a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    background-color: #00c0d4;
+    padding: 16px 32px;
+    border-radius: 24px;
+    transition: background-color 150ms ease-in-out;
+}
+
+.serviceCard > a:hover {
+    background-color: #33ece9;
+}
+
+/*
+
+=====================================
+
+                Details
+
+=====================================
+
+*/
+
+.detailsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    padding: 72px 0;
+    background: linear-gradient(105deg, #EEE 0%, #EAEAEA 25%, #FFF 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.detailsContentContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+}
+
+.detailsImageContainer {
+    order: 1;
+    max-width: 800px;
+    overflow: hidden;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+}
+
+.detailsImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.detailsContent {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detailsHeading {
+    color: #2fd4d0;
+}
+
+.detailsText {
+    line-height: 1.5;
+}
+
+.detailsContentContainer:nth-of-type(even) .detailsImageContainer {
+    order: 2;
+    justify-self: right;
+    box-shadow: 8px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.detailsContentContainer:nth-of-type(even) {
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.detailsContentContainer:nth-of-type(even) .detailsContent {
+    order: 1;
+}
+
+/*
+
+=====================================
+
+                Contact
+
+=====================================
+
+*/
+
+.contactContainer {
+    width: 100%;
+    height: 350px;
+    background-image: url(/images/servicesContactImage.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactHeaderContainer {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+    padding: 12px 12px 24px 12px;
+    border-radius: 12px;
+}
+
+.contactHeaderContainer > h1 {
+    color: #33ece9;
+}
+
+.contactCTAButton {
+    padding-top: 24px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 24px;
+}
+
+.contactCTAButton > a {
+    color: white;
+    text-decoration: none;
+    border-radius: 24px;
+    padding: 12px 24px;
+    background-color: #00c0d4;
+    transition: background-color 150ms ease-in-out;
+}
+
+.contactCTAButton > a:hover {
+    background-color: #33ece9;
+}
+/*
+
+=====================================
+
+            Media Queries
+
+=====================================
+
+*/
+
+@media (max-width: 3840px) {
+    .introHeader {
+        font-size: 7.2rem;
+    }
+
+    .introContent > h2 {
+        font-size: 2.8rem;
+    }
+
+    .introContent > p {
+        font-size: 1.8rem;
+    }
+
+    .servicesContainer > h1 {
+        font-size: 4.8rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2.4rem;
+    }
+
+    .serviceCard > p {
+        min-height: 175px;
+        font-size: 1.8rem;
+    }
+
+    .serviceCard > a {
+        font-size: 2rem;
+    }
+
+    .detailsHeading {
+        font-size: 4rem;
+    }
+
+    .detailsText {
+        font-size: 2rem;
+    }
+
+    .contactContainer {
+        background-position: 50% 35%;
+    }
+
+    .contactHeaderContainer > h1 {
+        font-size: 4rem;
+    }
+
+    .contactHeaderContainer > p {
+        font-size: 1.6rem;
+    }
+
+    .contactCTAButton > a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1920px) {
+    .introHeader {
+        font-size: 6rem;
+    }
+
+    .servicesContainer > h1 {
+        font-size: 4rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2.2rem;
+    }
+
+    .serviceCard > p {
+        min-height: 175px;
+        font-size: 1.8rem;
+    }
+
+    .serviceCard > a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .introHeader {
+        font-size: 5.2rem;
+    }
+
+    .servicesContainer {
+        max-width: 95%;
+        margin: 72px auto;
+    }
+
+    .detailsContentContainer {
+        width: 1400px;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .introHeader {
+        font-size: 4.4rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .introHeaderImageContainer {
+        background-size: 120%;
+        background-position: 15% 50%;
+    }
+    
+    .introHeaderContentBackground {
+        background: linear-gradient(105deg, #111 0%, #1A1A1A 45%, #222 55%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .introHeaderContentContainer {
+        max-width: 45%;
+    }
+
+    .introHeader {
+        font-size: 4.4rem;
+    }
+
+    .introContentContainer {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin: 0 auto;
+        gap: 48px;
+    }
+
+    .introImageContainer {
+        justify-self: center;
+    }
+
+
+    .detailsContentContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .detailsImageContainer {
+        justify-self: center;
+    }
+
+    .detailsContentContainer:nth-of-type(even) .detailsImageContainer {
+        order: 1;
+        justify-self: center;
+    }
+
+    .detailsContentContainer:nth-of-type(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .detailsContentContainer:nth-of-type(even) .detailsContent {
+        order: 2;
+    }
+
+    .detailsContent {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 968px) {
+    .introHeaderImageContainer {
+        background-size: 160%;
+        background-position: 40% 50%;
+    }
+
+    .introHeaderContentContainer {
+        max-width: 50%;
+    }
+
+    .introHeader {
+        font-size: 3.6rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2rem;
+    }
+
+    .serviceCard > p {
+        min-height: 150px;
+        font-size: 1.6rem;
+    }
+
+    .detailsHeading {
+        font-size: 3.6rem;
+    }
+
+    .detailsText {
+        font-size: 1.8rem;
+    }
+
+    .contactHeaderContainer {
+        max-width: 95%;
+    }
+
+    .contactHeaderContainer > h1 {
+        font-size: 3rem;
+    }
+
+    .contactHeaderContainer > p {
+        font-size: 1.4rem;
+    }
+
+    .contactCTAButton > a {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .introHeaderImageContainer {
+        background-image: url(/images/introServicesHeader.jpg);
+        background-size: 300%;
+        background-position: 65% 40%;
+    }
+
+    .introHeaderContentBackground {
+        background: linear-gradient(105deg, rgba(0, 0, 0, .4) 0%);
+    }
+    
+    .introHeaderContentContainer {
+        height: 100%;
+        position: relative;
+        top: 0; bottom: 0; left: 0; right: 0;
+        max-width: 90%;
+        transform: unset;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introHeader {
+        text-align: center;
+        white-space: wrap;
+    }
+
+    .introContentContainer {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .servicesContainer > h1 {
+        font-size: 4rem;
+    }
+
+    .serviceCard > h2 {
+        font-size: 2.2rem;
+    }
+
+    .serviceCard > p {
+        min-height: 175px;
+        font-size: 1.8rem;
+    }
+
+    .serviceCard > a {
+        font-size: 2rem;
+    }
+
+    .detailsHeading {
+        font-size: 3.2rem;
+    }
+
+    .detailsText {
+        font-size: 1.6rem;
+    }
+
+    .contactHeaderContainer > h1 {
+        font-size: 2.8rem;
+    }
+
+    .contactHeaderContainer > p {
+        font-size: 1.4rem;
+    }
+
+    .contactCTAButton > a {
+        font-size: 1.8rem;
+    }
 }
