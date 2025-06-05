@@ -195,7 +195,7 @@ h1 {
       margin: 12px auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 968px) {
   .teamCardsContainer {
     grid-template-columns: repeat(2, 1fr);
   }

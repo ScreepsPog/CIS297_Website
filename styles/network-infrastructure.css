@@ -9,12 +9,219 @@ html {
 }
 
 body {
-    background-color: #EEE;
     color: #222;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
+/*
+
+=====================================
+
+            Introduction
+
+=====================================
+
+*/
+
+.introContainer {
+    width: 100%;
+    margin-bottom: 72px;
+}
+
+.introHeaderImageContainer {
+    width: 100%;
+    height: 300px;
+    background-image: url(/images/introNetworkHeader.jpg);
+    filter: brightness(.75);
+    background-size: cover;
+    background-position: 50% 40%;
+    margin-bottom: 36px;
+}
+
+.introContentContainer {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 36px;
+    padding-top: 72px;
+    margin: 0 auto;
+}
+
+.introImageContainer {
+    width: 90%;
+    border-radius: 45px;
+    overflow: hidden;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.introImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.introContainer > h1 {
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #2fd4d0;
+    line-height: 1.3;
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.introContent > p {
+    line-height: 1.5;
+}
+
+
+/*
+
+=====================================
+
+                Details
+
+=====================================
+
+*/
+
+
+
+/*
+
+=====================================
+
+                Next Step
+
+=====================================
+
+*/
+
+.nextStepContainer {
+    width: 100%;
+    height: 300px;
+    background-image: url(/images/footerBackground.png);
+    background-size: 150%;
+    background-position: 90% 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextStepContent {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.nextStepContent > h1 {
+    color: white;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.nextStepCTAButton {
+    padding: 24px 0;
+    text-align: center;
+}
+
+.nextStepCTAButton > a {
+    color: white;
+    text-decoration: none;
+    border-radius: 24px;
+    padding: 12px 24px;
+    background-color: #33ece9;
+    transition: background-color 150ms ease-in-out;
+}
+
+.nextStepCTAButton > a:hover {
+    background-color: #00c0d4;
+}
+
+/*
+
+=====================================
+
+            Media Queries
+
+=====================================
+
+*/
+
+@media (max-width: 3840px) {
+    .introContainer > h1 {
+        font-size: 5rem;
+    }
+
+    .introContent > h2 {
+        font-size: 2.6rem;
+    }
+
+    .introContent > p {
+        font-size: 1.8rem;
+    }
+
+    .nextStepContent > h1 {
+        font-size: 2.8rem;
+    }
+
+    .nextStepCTAButton > a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .introContentContainer {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin: 0 auto;
+        gap: 48px;
+    }
+
+    .introImageContainer {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 968px) {
+    .introContainer > h1 {
+        max-width: 95%;
+        margin: 0 auto;
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .introContentContainer {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .introContainer > h1 {
+        font-size: 3.2rem;
+    }
+
+    .introContent {
+        text-align: center;
+    }
+
+    .nextStepContainer {
+        background-size: 200%;
+        background-position: 90% 30%;
+    }
+
+    .nextStepContent > h1 {
+        font-size: 1.8rem;
+    }
+
+    .nextStepCTAButton > a {
+        font-size: 1.8rem;
+    }
 }
