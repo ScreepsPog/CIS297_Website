@@ -23,9 +23,9 @@ body {
 }
 
 .hImg {
-    background-image: url(/images/contactImage.jpg);
+    background-image: url(/images/contactHeaderImage.jpg);
     background-size: cover;
-    background-position: 0% 40%;
+    background-position: 0% 10%;
 }
 
 .heroContentBackground {
