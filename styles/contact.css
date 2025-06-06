@@ -67,12 +67,9 @@ body {
 .heroHeader {
     color: white;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif
+    color: #2fd4d0;
 }
 
-.heroHeader > span {
-    color: #33ece9;
-}
 
 .heroText {
     color: white;

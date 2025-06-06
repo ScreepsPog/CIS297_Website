@@ -121,6 +121,7 @@ main {
 .servicesContainer > h1 {
     text-align: center;
     padding-bottom: 12px;
+    color: #2fd4d0;
 }
 
 .serviceCardsContainer {
@@ -239,6 +240,10 @@ main {
     gap: 16px;
 }
 
+.introHeader {
+    color: #2fd4d0;
+}
+
 .introText {
     line-height: 1.5;
 }
@@ -299,7 +304,7 @@ main {
 
 .reviewContainer > h1 {
     text-align: center;
-    color: white;
+    color: #2fd4d0;
     padding-bottom: 24px;
 }
 
@@ -415,6 +420,10 @@ main {
     color: white;
     padding: 12px 12px 24px 12px;
     border-radius: 12px;
+}
+
+.contactHeaderContainer > h1 {
+    color: #2fd4d0;
 }
 
 .contactCTAButton {
