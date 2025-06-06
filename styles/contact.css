@@ -9,14 +9,22 @@ html {
 }
 
 body {
-    background-color: #fafafa;
     color: #222;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* hero container and text */
+/*
+
+=====================================
+
+            Hero Container
+
+=====================================
+
+*/
+
 .heroContainer {
-    height: calc(45vh - 100px);
+    height: 300px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -28,10 +36,20 @@ body {
     background-position: 0% 10%;
 }
 
+/*
+
+=====================================
+
+            Hero Text
+
+=====================================
+
+*/
+
 .heroContentBackground {
     height: 100%;
     z-index: 2;
-   background: linear-gradient(105deg, #111111 0%, #00000070 50%, #1111114f 100%);
+      background: linear-gradient(105deg, #111 0%, #1A1A1A 15%, #222 35%, rgba(0, 0, 0, 0) 100%);
     position: relative;
 }
 
@@ -47,17 +65,72 @@ body {
 }
 
 .heroHeader {
-    font-size: 3.5rem;
     color: white;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif
+}
+
+.heroHeader > span {
+    color: #33ece9;
 }
 
 .heroText {
     color: white;
     padding-left: 24px;
     padding-bottom: 16px;
-    font-size: 2rem;
+}
+
+
+/*
+
+=====================================
+
+            Introduction
+
+=====================================
+
+*/
+
+.introContainer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 72px;
+}
+
+.introContentContainer {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 36px;
+    padding-top: 36px;
+    margin: 0 auto;
+}
+
+.introImageContainer {
+    width: 90%;
+    border-radius: 45px;
+    overflow: hidden;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.introImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.introContent > h2 {
+    color: #33ece9;
+}
+
+.introContent > p {
+    line-height: 1.5;
 }
 
 .form-container {
@@ -79,7 +152,7 @@ body {
 }
 
 .form-container p a:hover {
-color: #fafafa;
+  color: #fafafa;
 }
 
 label {
@@ -140,4 +213,132 @@ input[type="submit"]:hover {
   text-align: center;
   padding: 60px 20px;
   color: #2fd4d0;
+}
+
+/*
+
+=====================================
+
+            Media Queries
+
+=====================================
+
+*/
+
+@media (max-width: 3840px) {
+    .heroHeader {
+        font-size: 7.2rem;
+    }
+
+    .heroText {
+      font-size: 2.4rem;
+    }
+
+    .introContent > h2 {
+        font-size: 2.8rem;
+    }
+
+    .introContent > p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1920px) {
+    .heroHeader {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .heroHeader {
+        font-size: 5.2rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hImg {
+        background-size: 120%;
+        background-position: 15% 10%;
+    }
+    
+    .heroContentBackground {
+      background: linear-gradient(105deg, #111 0%, #1A1A1A 15%, #222 35%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .headerContentContainer {
+        max-width: 45%;
+    }
+
+    .heroHeader {
+        font-size: 4.4rem;
+    }
+
+    .heroText {
+      font-size: 2rem;
+    }
+
+    .introContentContainer {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin: 0 auto;
+        gap: 48px;
+    }
+
+    .introImageContainer {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 968px) {
+    .headerContentContainer {
+        max-width: 50%;
+    }
+
+    .heroHeader {
+        font-size: 3.6rem;
+    }
+
+    .heroText {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .hImg {
+        background-size: 300%;
+        background-position: 65% 10%;
+    }
+
+    .heroContentBackground {
+        background: linear-gradient(105deg, rgba(0, 0, 0, .4) 0%);
+    }
+    
+    .headerContentContainer {
+        height: 100%;
+        position: relative;
+        top: 0; bottom: 0; left: 0; right: 0;
+        max-width: 90%;
+        transform: unset;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroHeader {
+        text-align: center;
+        white-space: wrap;
+    }
+
+    .heroText {
+      text-align: center;
+    }
+
+    .introContentContainer {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .form-container {
+      max-width: 95%;
+    }
 }
