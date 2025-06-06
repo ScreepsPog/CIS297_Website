@@ -88,6 +88,65 @@ body {
 
 */
 
+.detailsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 144px;
+    padding: 72px 0;
+    background: linear-gradient(105deg, #EEE 0%, #EAEAEA 25%, #FFF 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.detailsContentContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+}
+
+.detailsImageContainer {
+    order: 1;
+    max-width: 800px;
+    overflow: hidden;
+    box-shadow: -8px -4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+}
+
+.detailsImageContainer > img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.detailsContent {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detailsHeading {
+    color: #2fd4d0;
+}
+
+.detailsText {
+    line-height: 1.5;
+}
+
+.detailsContentContainer:nth-of-type(even) .detailsImageContainer {
+    order: 2;
+    justify-self: right;
+    box-shadow: 8px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.detailsContentContainer:nth-of-type(even) {
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.detailsContentContainer:nth-of-type(even) .detailsContent {
+    order: 1;
+}
 
 
 /*
@@ -168,12 +227,27 @@ body {
         font-size: 1.8rem;
     }
 
+    .detailsHeading {
+        font-size: 4rem;
+    }
+
+    .detailsText {
+        font-size: 2rem;
+    }
+
     .nextStepContent > h1 {
         font-size: 2.8rem;
     }
 
     .nextStepCTAButton > a {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .detailsContentContainer {
+        width: 1400px;
+        max-width: 95%;
     }
 }
 
@@ -188,6 +262,32 @@ body {
     .introImageContainer {
         justify-self: center;
     }
+
+    .detailsContentContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .detailsImageContainer {
+        justify-self: center;
+    }
+
+    .detailsContentContainer:nth-of-type(even) .detailsImageContainer {
+        order: 1;
+        justify-self: center;
+    }
+
+    .detailsContentContainer:nth-of-type(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .detailsContentContainer:nth-of-type(even) .detailsContent {
+        order: 2;
+    }
+
+    .detailsContent {
+        max-width: 80%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 968px) {
@@ -195,6 +295,14 @@ body {
         max-width: 95%;
         margin: 0 auto;
         font-size: 4rem;
+    }
+
+    .detailsHeading {
+        font-size: 3.6rem;
+    }
+
+    .detailsText {
+        font-size: 1.8rem;
     }
 }
 
@@ -210,6 +318,14 @@ body {
 
     .introContent {
         text-align: center;
+    }
+
+    .detailsHeading {
+        font-size: 3.2rem;
+    }
+
+    .detailsText {
+        font-size: 1.6rem;
     }
 
     .nextStepContainer {
